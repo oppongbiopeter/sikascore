@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #161616;
+  --color-surface-2: #1f1f1f;
+  --color-fg: #f4f4f0;
+  --color-muted: #8b8b8b;
+  --color-subtle: #5c5c5c;
+  --color-lime: #c8f53c;
+  --color-lime-fg: #12180a;
+  --color-border: #2a2a2a;
+  --color-gauge-mint: #7dff9a;
+  --color-gauge-yellow: #f5e14a;
+  --color-gauge-orange: #ff8a3d;
+  --color-gauge-red: #ff5a6b;
+  --color-excellent: #7dff9a;
+  --color-good: #c8f53c;
+  --color-average: #f5e14a;
+  --color-below: #ff8a3d;
+
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --shadow-border: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(255, 255, 255, 0.13);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
